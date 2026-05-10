@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
+  <rect width="960" height="360" fill="#ffffff"/>
+  <line x1="40" y1="290" x2="920" y2="290" stroke="#222222" stroke-width="4"/>
+  <rect x="90" y="70" width="28" height="220" fill="#d9d9d9" stroke="#222222" stroke-width="3"/>
+
+  <polyline
+    points="118,150 150,150 170,120 200,180 230,120 260,180 290,120 320,180 350,120 380,150"
+    fill="none"
+    stroke="#1f5aa6"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+  <text x="235" y="105" font-size="34" text-anchor="middle" fill="#1f5aa6">k</text>
+
+  <line x1="118" y1="230" x2="170" y2="230" stroke="#555555" stroke-width="6"/>
+  <line x1="170" y1="200" x2="170" y2="260" stroke="#555555" stroke-width="6"/>
+  <line x1="220" y1="200" x2="220" y2="260" stroke="#555555" stroke-width="6"/>
+  <rect x="170" y="205" width="50" height="50" fill="#f5f5f5" stroke="#555555" stroke-width="6"/>
+  <line x1="220" y1="230" x2="380" y2="230" stroke="#555555" stroke-width="6"/>
+  <text x="195" y="190" font-size="34" text-anchor="middle" fill="#555555">c</text>
+
+  <rect x="380" y="110" width="210" height="140" rx="6" ry="6" fill="#f4c542" stroke="#222222" stroke-width="4"/>
+  <text x="485" y="190" font-size="42" text-anchor="middle" fill="#222222">m</text>
+
+  <line x1="590" y1="180" x2="760" y2="180" stroke="#c0392b" stroke-width="6"/>
+  <polygon points="760,180 724,162 724,198" fill="#c0392b"/>
+  <text x="680" y="155" font-size="32" text-anchor="middle" fill="#c0392b">x(t), f(t)</text>
+
+  <line x1="380" y1="260" x2="590" y2="260" stroke="#222222" stroke-width="4"/>
+  <line x1="410" y1="260" x2="410" y2="290" stroke="#222222" stroke-width="4"/>
+  <line x1="450" y1="260" x2="450" y2="290" stroke="#222222" stroke-width="4"/>
+  <line x1="490" y1="260" x2="490" y2="290" stroke="#222222" stroke-width="4"/>
+  <line x1="530" y1="260" x2="530" y2="290" stroke="#222222" stroke-width="4"/>
+  <line x1="570" y1="260" x2="570" y2="290" stroke="#222222" stroke-width="4"/>
+</svg>

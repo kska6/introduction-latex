@@ -1,0 +1,12 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{latex-intro-warning-filter}[2026/05/10 v0.1 Warning filters for introduction-latex]
+
+\RequirePackage{silence}
+
+% Keep the build log focused on actionable issues for this material.
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Size substitutions}
+\WarningFilter{luatexja-preset}{Japanese fonts will be scaled by 1}
+\WarningFilter{luatexja-fontspec}{addjfontfeature(s) ignored}
+
+\endinput

@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{latex-intro-material}[2026/05/11 v0.3 LaTeX intro material style]
+
+\RequirePackage{latex-intro-warning-filter}
+\RequirePackage[haranoaji]{luatexja-preset}
+\RequirePackage[margin=25truemm,headheight=18pt]{geometry}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{bm}
+\RequirePackage{booktabs}
+\RequirePackage{datetime2}
+\RequirePackage{fancyhdr}
+\RequirePackage{fancyvrb}
+\RequirePackage{float}
+\RequirePackage{graphicx}
+\RequirePackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
+\RequirePackage{lastpage}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  citecolor=blue!50!black,
+  urlcolor=blue!70!black
+}
+
+\numberwithin{equation}{section}
+\DTMsetdatestyle{iso}
+
+\endinput
