@@ -16,13 +16,6 @@
       "command": "latexmk",
       "args": [
         "-lualatex",
-        "-r",
-        ".latexmkrc",
-        "-outdir=out",
-        "-auxdir=out/aux",
-        "-emulate-aux-dir",
-        "-interaction=nonstopmode",
-        "-file-line-error",
         "%RELATIVE_CWD_DOC%"
       ]
     }

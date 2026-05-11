@@ -55,7 +55,7 @@ PDF は `out/`、補助ファイルは `out/aux/` に出力されます。
 
 `.vscode/settings.json` に LaTeX Workshop 用の設定を置いています。
 VSCode でもターミナルでも `latexmk` を使う前提にそろえているため、ビルド手順を二重管理しなくて済みます。
-LaTeX Workshop では `latex-workshop.latex.build.fromFolder` を `.` に設定し、`src/*.tex` の一つ上、つまりリポジトリルートからレシピを実行します。レシピ引数でも `.latexmkrc` を明示的に読み込ませ、`-outdir=out` と `-auxdir=out/aux` を指定しています。これにより、VSCode からのビルドでも CLI と同じ前提で、PDF は `out/`、補助ファイルは `out/aux/` にそろえます。
+LaTeX Workshop では `latex-workshop.latex.build.fromFolder` を `.` に設定し、`src/*.tex` の一つ上、つまりリポジトリルートからレシピを実行します。レシピ側では `-lualatex` と対象ファイルだけを渡し、ビルド内容は `.latexmkrc` に一元化しています。これにより、VSCode からのビルドでも CLI と同じ前提で、PDF は `out/`、補助ファイルは `out/aux/` にそろえます。
 `.latexmkrc` では `luaotfload` 向けに repo 内キャッシュ先も設定しています。これは LuaLaTeX で常に必須という意味ではなく、サンドボックス内実行では TeX Live 既定のキャッシュ先へ書き込めないことがあるため、その互換設定として残しています。
 
 `.latexmkrc` の見方は次の 2 段です。
