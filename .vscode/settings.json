@@ -1,6 +1,6 @@
 {
   "latex-workshop.latex.autoBuild.run": "never",
-  "latex-workshop.latex.outDir": "%DIR%/../out/aux",
+  "latex-workshop.latex.outDir": "%DIR%/../out",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk (lualatex)",
@@ -15,6 +15,9 @@
       "command": "latexmk",
       "args": [
         "-lualatex",
+        "-outdir=%DIR%/../out",
+        "-auxdir=%DIR%/../out/aux",
+        "-emulate-aux-dir",
         "-interaction=nonstopmode",
         "-file-line-error",
         "%DOC%"

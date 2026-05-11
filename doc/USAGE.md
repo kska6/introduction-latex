@@ -18,6 +18,8 @@
 latexmk -lualatex src/minimal.tex
 ```
 
+リポジトリのルートディレクトリで実行する想定です。`latexmk -cd -lualatex src/minimal.tex` のように `-cd` を付けても、同じ設定でビルドできます。
+
 ### エンジン確認用サンプルをビルドする
 
 ```sh
@@ -53,6 +55,13 @@ PDF は `out/`、補助ファイルは `out/aux/` に出力されます。
 
 `.vscode/settings.json` に LaTeX Workshop 用の設定を置いています。
 VSCode でもターミナルでも `latexmk` を使う前提にそろえているため、ビルド手順を二重管理しなくて済みます。
+LaTeX Workshop の `outDir` は `out/` に合わせてあり、レシピ引数でも `-outdir` と `-auxdir` を明示しています。これにより、VSCode からのビルドでも PDF は `out/`、補助ファイルは `out/aux/` にそろえます。
+`.latexmkrc` では `luaotfload` 向けに repo 内キャッシュ先も設定しています。これは LuaLaTeX で常に必須という意味ではなく、サンドボックス内実行では TeX Live 既定のキャッシュ先へ書き込めないことがあるため、その互換設定として残しています。
+
+`.latexmkrc` の見方は次の 2 段です。
+
+- 必須部分: LuaLaTeX の指定、`biblatex + biber` の指定、`out/` と `out/aux/` の出力分離、`sty/` と `bib/` を安定して見つけるための `TEXINPUTS` / `BIBINPUTS`
+- サンドボックス制約由来の部分: `TEXMFVAR` / `TEXMFCACHE` / `VARTEXMF` と、そのディレクトリ作成処理
 
 ## よく触る場所
 
