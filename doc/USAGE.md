@@ -57,11 +57,14 @@ PDF は `out/`、補助ファイルは `out/aux/` に出力されます。
 VSCode でもターミナルでも `latexmk` を使う前提にそろえているため、ビルド手順を二重管理しなくて済みます。
 LaTeX Workshop の `outDir` は `out/` に合わせてあり、レシピ引数でも `-outdir` と `-auxdir` を明示しています。これにより、VSCode からのビルドでも PDF は `out/`、補助ファイルは `out/aux/` にそろえます。
 `.latexmkrc` では `luaotfload` 向けに repo 内キャッシュ先も設定しています。これは LuaLaTeX で常に必須という意味ではなく、サンドボックス内実行では TeX Live 既定のキャッシュ先へ書き込めないことがあるため、その互換設定として残しています。
+LaTeX Workshop のレシピ引数では `.latexmkrc` も明示的に読み込ませています。これにより、VSCode からのビルドでも CLI と同じ `latexmk` 設定を使います。
 
 `.latexmkrc` の見方は次の 2 段です。
 
 - 必須部分: LuaLaTeX の指定、`biblatex + biber` の指定、`out/` と `out/aux/` の出力分離、`sty/` と `bib/` を安定して見つけるための `TEXINPUTS` / `BIBINPUTS`
 - サンドボックス制約由来の部分: `TEXMFVAR` / `TEXMFCACHE` / `VARTEXMF` と、そのディレクトリ作成処理
+
+前回の失敗が残って `gave an error in previous invocation of latexmk` と出る場合は、ソースを直したあとでも再ビルドが走らないことがあります。その場合は `latexmk -g -lualatex src/introduction-latex.tex` を 1 回実行するか、LaTeX Workshop の clean を使って補助ファイルを消してから再ビルドしてください。
 
 ## よく触る場所
 
