@@ -1,5 +1,6 @@
 {
   "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.build.fromFolder": ".",
   "latex-workshop.latex.outDir": "%DIR%/../out",
   "latex-workshop.latex.recipes": [
     {
@@ -16,13 +17,13 @@
       "args": [
         "-lualatex",
         "-r",
-        "%WORKSPACE_FOLDER%/.latexmkrc",
-        "-outdir=%DIR%/../out",
-        "-auxdir=%DIR%/../out/aux",
+        ".latexmkrc",
+        "-outdir=out",
+        "-auxdir=out/aux",
         "-emulate-aux-dir",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "%DOC%"
+        "%RELATIVE_CWD_DOC%"
       ]
     }
   ]
