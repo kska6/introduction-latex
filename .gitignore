@@ -15,4 +15,6 @@
 *.synctex.gz
 *.toc
 latex_out/
+latex.out/
+pdf/
 out/

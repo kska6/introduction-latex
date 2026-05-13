@@ -1,7 +1,7 @@
 {
   "latex-workshop.latex.autoBuild.run": "never",
   "latex-workshop.latex.build.fromFolder": ".",
-  "latex-workshop.latex.outDir": "%DIR%/../out",
+  "latex-workshop.latex.outDir": "%DIR%/../pdf",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk (lualatex)",
